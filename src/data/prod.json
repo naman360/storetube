@@ -1,0 +1,88 @@
+[
+    {
+        "src":"../../src/img/products/1.png",
+        "price":"1500",
+        "name":"White Hoodie"
+    },
+    {
+        "src":"../../src/img/products/2.png",
+        "price":"2000",
+        "name":"Maroon Bomber Jacket"
+    },
+    {
+        "src":"../../src/img/products/3.png",
+        "price":"2000",
+        "name":"Brown Jacket"
+    },
+    {
+        "src":"../../src/img/products/4.png",
+        "price":"1500",
+        "name":"Blue Denim Jacket"
+    },
+    {
+        "src":"../../src/img/products/5.png",
+        "price":"1800",
+        "name":"White Hoodie"
+    },
+
+    {
+        "src":"../../src/img/products/prod1.jpg",
+        "price":"2000",
+        "name":"Red Check Shirt"
+    },
+
+    {
+        "src":"../../src/img/products/prod2.jpg",
+        "price":"1500",
+        "name":"Dark Blue Denim Shirt"
+    },
+
+    {
+        "src":"../../src/img/products/prod3.jpg",
+        "price":"2500",
+        "name":"Classic White Hoodie"
+    },
+
+    {
+        "src":"../../src/img/products/prod4.jpg",
+        "price":"4000",
+        "name":"Mega Combo"
+    },
+
+    {
+        "src":"../../src/img/products/prod5.jpg",
+        "price":"900",
+        "name":"White Tshirt"
+    },
+
+    {
+        "src":"../../src/img/products/prod6.jpg",
+        "price":"2500",
+        "name":"Dotted Short"
+    },
+
+    {
+        "src":"../../src/img/products/prod7.jpg",
+        "price":"3000",
+        "name":"Grey Blazer"
+    },
+
+    {
+        "src":"../../src/img/products/prod8.jpg",
+        "price":"2500",
+        "name":"Classic Dotted Pullover"
+    },
+
+    {
+        "src":"../../src/img/products/prod9.jpg",
+        "price":"2800",
+        "name":"Olive Coat"
+    },
+
+    {
+        "src":"../../src/img/products/prod10.jpeg",
+        "price":"3000",
+        "name":"Black Leather Jacket"
+    }
+     
+]
