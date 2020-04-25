@@ -9,12 +9,48 @@ fetch(url)
         <img class="card-img-top" src="${data[key].src}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${data[key].name}</h5>
-          <h5 class="card-title">&#8377;${data[key].price}</h5>
-          <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn">Add to Cart</a>
+          <h5 class="card-title">${data[key].price}</h5>
+          <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn addToCart">Add to Cart</a>
         </div>
       </div>
       `;
     }
+        // Adding product to localstorage
+const addToCart = document.getElementsByClassName('addToCart');
+let productsIn = []; 
+let obj = {};
+for(let i=0; i < addToCart.length; i++){
+    addToCart[i].addEventListener( 'click' , function(e){
+        let q;
+
+        // Targeting the clicked product
+        let presentData = JSON.parse(localStorage.getItem(`product${i}`));
+          if(presentData === null){
+            q=1;
+          }
+          else{
+            q = presentData.quantity;
+            q++;
+          }
+
+       
+        let temp = e.target.parentElement;
+
+          // Create an object
+        obj = {
+            src: temp.parentElement.children[0].src,
+            name:temp.children[0].innerText,
+            price:temp.children[1].innerText,
+            quantity:q
+        };
+
+        // Push to localstorage
+        localStorage.setItem(`product${i}`,JSON.stringify(obj));
+    })
+}
+
+
+
 });
 
 const products=document.getElementsByClassName('products')[0];
@@ -27,11 +63,49 @@ fetch(url)
         <img class="card-img-top" src="${data[key].src}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${data[key].name}</h5>
-          <h5 class="card-title">&#8377;${data[key].price}</h5>
-          <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn">Add to Cart</a>
+          <h5 class="card-title">${data[key].price}</h5>
+          <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn addToCart">Add to Cart</a>
         </div>
       </div>
       `;
     }
+
+    // Adding product to localstorage
+const addToCart = document.getElementsByClassName('addToCart');
+let productsIn = []; 
+let obj = {};
+for(let i=0; i < addToCart.length; i++){
+    addToCart[i].addEventListener( 'click' , function(e){
+        let q;
+
+        // Targeting the clicked product
+        let presentData = JSON.parse(localStorage.getItem(`product${i}`));
+          if(presentData === null){
+            q=1;
+          }
+          else{
+            q = presentData.quantity;
+            q++;
+          }
+
+       
+        let temp = e.target.parentElement;
+
+          // Create an object
+        obj = {
+            src: temp.parentElement.children[0].src,
+            name:temp.children[0].innerText,
+            price:temp.children[1].innerText,
+            quantity:q
+        };
+
+        // Push to localstorage
+        localStorage.setItem(`product${i}`,JSON.stringify(obj));
+    })
+}
+
+
+
+
 });
 
