@@ -125,6 +125,12 @@ nav{
     position: relative;
     margin-top: 40px ;
 }
+.cartBottom{
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    margin-top: 40px ;
+}
 .items{
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +172,29 @@ nav{
     justify-content: center;
     margin-top: 20px;
 }
+
+/* Footer */
+footer{
+    margin-top: 150px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+}
+.btn-info{
+    margin-top: 40px;
+    background-color: rgba(255, 51, 85, 0.85) !important;
+    border-color: rgba(255, 51, 85, 0.85) !important;
+}
+.btn-info:hover{
+    background-color: rgba(255, 51, 85, 1) !important;
+}
+
+
+
+
 
 /* Responsive queries */
 @media(max-width:900px){

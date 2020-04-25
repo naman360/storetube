@@ -3,13 +3,13 @@ const url=`./src/data/prod.json`;
 fetch(url)
 .then(response => response.json())
 .then((data) =>{
-    for(let key = 0; key < 5;key++){
+    for(let key = 0; key < 4;key++){
       teaserProd.innerHTML +=`
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="${data[key].src}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${data[key].name}</h5>
-          <h5 class="card-title">${data[key].price}</h5>
+          <h5 class="card-title">$<span class="price">${data[key].price}</span></h5>
           <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn addToCart">Add to Cart</a>
         </div>
       </div>
@@ -40,9 +40,10 @@ for(let i=0; i < addToCart.length; i++){
         obj = {
             src: temp.parentElement.children[0].src,
             name:temp.children[0].innerText,
-            price:temp.children[1].innerText,
+            price:temp.children[1].children[0].innerText,
             quantity:q
         };
+
 
         // Push to localstorage
         localStorage.setItem(`product${i}`,JSON.stringify(obj));
@@ -63,7 +64,7 @@ fetch(url)
         <img class="card-img-top" src="${data[key].src}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${data[key].name}</h5>
-          <h5 class="card-title">${data[key].price}</h5>
+          <h5 class="card-title">$<span class="price">${data[key].price}</span></h5>
           <a href="#" data-toggle="modal" data-target="#myModal" class="shopBtn addToCart">Add to Cart</a>
         </div>
       </div>
@@ -95,7 +96,7 @@ for(let i=0; i < addToCart.length; i++){
         obj = {
             src: temp.parentElement.children[0].src,
             name:temp.children[0].innerText,
-            price:temp.children[1].innerText,
+            price:temp.children[1].children[0].innerText,
             quantity:q
         };
 

@@ -10,7 +10,7 @@ for (let i = 0; i < localStorage.length; i++){
                     <img class="card-img-top" src=${cartItem.src} alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">${cartItem.name}</h5>
-                      <h5 class="card-title">&#8377;<span class="price">${cartItem.price}</span></h5>
+                      <h5 class="card-title">$<span class="price">${cartItem.price}</span></h5>
                       <div class="quantity">
                         <i class="fa sign fa-minus"  style="color: white;"></i>
                         <span class="qty">${cartItem.quantity}</span>
@@ -65,7 +65,7 @@ empty.addEventListener('click' , function(){
     }
     items.innerHTML = "";
     subTotal.innerHTML = 0;
-    document.getElementsByClassName('totalamount')[0].innerHTML = 50 ;
+    document.getElementsByClassName('totalamount')[0].innerHTML = 2 ;
 
 });
 
@@ -77,5 +77,5 @@ function totalCalc(){
         x += parseInt(flag.quantity)*parseInt(flag.price);
         subTotal.innerHTML = x;
     }
-    document.getElementsByClassName('totalamount')[0].innerHTML = 50 + parseInt(x);
+    document.getElementsByClassName('totalamount')[0].innerHTML = 2 + parseInt(x);
 }
