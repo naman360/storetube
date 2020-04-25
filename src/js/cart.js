@@ -2,7 +2,7 @@
 // totalCalc();
 let items = document.getElementsByClassName('items')[0];
 for (let i = 0; i < localStorage.length; i++){
-    let cartItem = JSON.parse(localStorage.getItem(`product${i}`));
+    let cartItem = JSON.parse(localStorage.getItem(localStorage.key(i)));
     
     if(cartItem){     
     items.innerHTML += `
@@ -24,31 +24,31 @@ for (let i = 0; i < localStorage.length; i++){
  }let qty = document.getElementsByClassName('qty');
 
  const minus = document.getElementsByClassName('fa-minus');
- for(let i=0 ; i < minus.length ; i++){
+ for(let i=0 ; i < localStorage.length ; i++){
      minus[i].addEventListener('click', function(e){
          let parentEl = e.target.parentNode.children[1];
-         let temp = JSON.parse(localStorage.getItem(`product${i}`))
+         let temp = JSON.parse(localStorage.getItem(localStorage.key(i)))
          let x = temp.quantity;
          if(parseInt(x)){
              x--;
              parentEl.innerText = x;
              temp.quantity = x;
-             localStorage.setItem(`product${i}`,JSON.stringify(temp))
+             localStorage.setItem(localStorage.key(i),JSON.stringify(temp))
          }
          totalCalc();
      });
      
  }
  const plus = document.getElementsByClassName('fa-plus');
- for(let i=0 ; i < plus.length ; i++){
+ for(let i=0 ; i < localStorage.length ; i++){
      plus[i].addEventListener('click', function(e){
          let parentEl = e.target.parentNode.children[1];
-         let temp = JSON.parse(localStorage.getItem(`product${i}`))
+         let temp = JSON.parse(localStorage.getItem(localStorage.key(i)))
          let x = temp.quantity;
              x++;
              parentEl.innerText = x;
              temp.quantity = x;
-             localStorage.setItem(`product${i}`,JSON.stringify(temp))
+             localStorage.setItem(localStorage.key(i),JSON.stringify(temp))
 
              totalCalc();
      });
@@ -73,7 +73,7 @@ function totalCalc(){
     
     let x=0;
     for(let i =0; i < localStorage.length; i++){
-       let flag = JSON.parse(localStorage.getItem(`product${i}`))
+       let flag = JSON.parse(localStorage.getItem(localStorage.key(i)))
         x += parseInt(flag.quantity)*parseInt(flag.price);
         subTotal.innerHTML = x;
     }
